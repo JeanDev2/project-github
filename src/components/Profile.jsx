@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-const ProfileStyled = styled.div``;
+const ProfileStyled = styled.div`
+  grid-area: profile;
+  background-color: black;
+  color: white;
+`;
 
 function Profile() {
   return <ProfileStyled>Profile</ProfileStyled>;
