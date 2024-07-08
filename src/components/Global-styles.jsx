@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStylesStyled = createGlobalStyle`
     :root {
@@ -8,7 +8,7 @@ const GlobalStylesStyled = createGlobalStyle`
         --bg: #0d1117; 
         --buttonBG: #22262c;
         --grey: #8b949e; 
-        --grey-1: #c5ced7; 
+        --grey-1: #c5ced7;
         --grey-2: #3f4954; 
         --pink: #cc68a0; 
         --yellow: #f1e05a; 
@@ -32,8 +32,6 @@ const GlobalStylesStyled = createGlobalStyle`
         font: var(--body1-regular);
         margin: 0;
     }
-`
+`;
 
-
-
-export default GlobalStylesStyled
+export default GlobalStylesStyled;
