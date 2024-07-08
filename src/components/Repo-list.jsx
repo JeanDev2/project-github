@@ -5,7 +5,7 @@ const RepoListStyled = styled.div`
   background-color: blanchedalmond;
 `;
 
-function RepoList() {
+function RepoList({ RepoList }) {
   return <RepoListStyled>RepoList</RepoListStyled>;
 }
 

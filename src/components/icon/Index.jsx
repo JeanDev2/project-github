@@ -13,60 +13,55 @@ import Star from "./star";
 import Twitter from "./twitter";
 import User from "./user";
 
-function Index({ name, ...props }) {
+function Index({ name, size = 16, color = "#fff", ...props }) {
+  const iconProps = { size, color, ...props };
   switch (name) {
     case "arrowDown": {
-      return <ArrowDown {...props} />;
+      return <ArrowDown {...iconProps} />;
     }
     case "book": {
-      return <Book {...props} />;
+      return <Book {...iconProps} />;
     }
     case "branch": {
-      return <Branch {...props} />;
+      return <Branch {...iconProps} />;
     }
     case "cancel": {
-      return <Cancel {...props} />;
+      return <Cancel {...iconProps} />;
     }
     case "check": {
-      return <Check {...props} />;
+      return <Check {...iconProps} />;
     }
     case "github": {
-      return <Github {...props} />;
+      return <Github {...iconProps} />;
     }
     case "heart": {
-      return <Heart {...props} />;
+      return <Heart {...iconProps} />;
     }
     case "home": {
-      return <Home {...props} />;
+      return <Home {...iconProps} />;
     }
     case "link": {
-      return <Link {...props} />;
+      return <Link {...iconProps} />;
     }
     case "location": {
-      return <Location {...props} />;
+      return <Location {...iconProps} />;
     }
     case "search": {
-      return <Search {...props} />;
+      return <Search {...iconProps} />;
     }
     case "star": {
-      return <Star {...props} />;
+      return <Star {...iconProps} />;
     }
     case "twitter": {
-      return <Twitter {...props} />;
+      return <Twitter {...iconProps} />;
     }
     case "user": {
-      return <User {...props} />;
+      return <User {...iconProps} />;
     }
     default: {
       return null;
     }
   }
 }
-
-// Definimos propiedades para los iconos.
-Index.defaultProps = {
-  size: 16,
-  color: "#fff",
-};
 
 export default Index;
