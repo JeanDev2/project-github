@@ -38,4 +38,23 @@ function Buttons({ text, link, className, icon }) {
   );
 }
 
+export const ButtonContrast = styled(Buttons)`
+  background-color: var(--white);
+  color: var(--buttonBG);
+  &:hover {
+    background-color: var(--buttonBG);
+    color: var(--white);
+  }
+`;
+
+export const ButtonRounded = styled(Buttons)`
+  border: 1px solid var(--grey-1);
+  min-inline-size: initial;
+  border-radius: 50%;
+  padding: 0.75rem;
+  &:hover {
+    background-color: var(--buttonBG);
+    transform: scale(1.1);
+  }
+`;
 export default Buttons;

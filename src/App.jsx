@@ -3,25 +3,51 @@ import Layout from "./components/Layout";
 import Profile from "./components/Profile";
 import RepoList from "./components/Repo-list";
 import Search from "./components/Search";
-
-const repoList = [
-  {
-    name: "mi primer proyecto con React",
-    id: 123,
-  },
-  {
-    name: "Mi segundo Proyecto con React",
-    id: 124,
-  },
-];
+// import repoData from "./components/repo-data";
+import { useState, useEffect } from "react";
+import { getUser, getRepos } from "./services/users";
+import { useParams } from "react-router-dom";
+import Modal from "./components/Modal";
 
 function App() {
+  const params = useParams();
+  let username = params.user;
+  if (!username) {
+    username = "leonidasesteban";
+  }
+  const [user, setUser] = useState([]);
+  const [repos, setRepos] = useState([]);
+  const [modal, setModal] = useState(false);
+  const [search, setSearch] = useState("");
+  const [language, setLanguage] = useState("");
+  useEffect(() => {
+    getUser(username).then(({ data, isError }) => {
+      if (isError) {
+        console.log("no hemos encontrado a este crack");
+        return;
+      }
+      setUser(data);
+    });
+    getRepos(username).then(({ data, isError }) => {
+      if (isError) {
+        console.log("no hemos encontrado los repos de este crack");
+        return;
+      }
+      setRepos(data);
+    });
+  }, [username]);
   return (
     <Layout>
-      <Profile />
-      <Filters />
-      <RepoList repoList={repoList} />
-      <Search />
+      <Modal isActive={modal} setModal={setModal} />
+      <Profile {...user} />
+      <Filters
+        language={language}
+        setLanguage={setLanguage}
+        setSearch={setSearch}
+        repoListCount={repos.length}
+      />
+      <RepoList language={language} search={search} repoList={repos} />
+      <Search setModal={setModal} />
     </Layout>
   );
 }

@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import props from "./profiledata";
+// import props from "./profiledata";
 import Button from "./Button";
-import Icon from "./icon/Index";
+import Icon from "../assets/icon/Index";
 
 const ProfileStyled = styled.div`
   grid-area: profile;
@@ -47,7 +47,7 @@ const ProfileStyled = styled.div`
   }
 `;
 
-function Profile() {
+function Profile(props) {
   const {
     name,
     login,
@@ -59,6 +59,7 @@ function Profile() {
     twitter_username,
     blog,
   } = props;
+
   return (
     <ProfileStyled>
       <img
