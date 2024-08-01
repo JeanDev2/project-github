@@ -13,7 +13,7 @@ const InputText = styled.input`
   &:focus {
     border: 1px solid var(--primary);
   }
-  @media screen and (prefers-color-scheme) {
+  @media (prefers-color-scheme: light) {
     color: var(--bg);
     background-color: var(--white);
     &:hover,

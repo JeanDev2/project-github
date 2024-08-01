@@ -63,7 +63,7 @@ const RepoItemStyled = styled.div`
       color: var(--white);
     }
   }
-  @media screen and (prefers-color-scheme) {
+  @media (prefers-color-scheme: light) {
     border-block-end: 1px solid var(--grey-6);
     .topicsItem {
       background-color: var(--blue-1);

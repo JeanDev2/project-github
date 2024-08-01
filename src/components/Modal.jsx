@@ -55,7 +55,7 @@ const ModalContentStyled = styled.form`
     font: var(--headline2-semi-bold);
     margin: 0;
   }
-  @media screen and (prefers-color-scheme) {
+  @media (prefers-color-scheme: light) {
     background-color: var(--primary);
   }
 `;

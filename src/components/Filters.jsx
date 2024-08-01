@@ -20,7 +20,7 @@ const FiltersStyled = styled.div`
     display: flex;
     gap: 0.5rem;
   }
-  @media screen and (prefers-color-scheme) {
+  @media (prefers-color-scheme: light) {
     .count {
       color: var(--black);
     }

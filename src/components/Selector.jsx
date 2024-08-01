@@ -7,7 +7,7 @@ const SelectorStyled = styled.select`
   padding-inline: 1rem;
   font: var(--body2-semi-bold);
   border-radius: 0.5rem;
-  @media screen and (prefers-color-scheme) {
+  @media (prefers-color-scheme: light) {
     background-color: var(--grey-5);
     color: var(--bg);
     border: 1px solid var(--grey);

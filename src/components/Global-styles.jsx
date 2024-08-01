@@ -35,7 +35,7 @@ const GlobalStylesStyled = createGlobalStyle`
         color: var(--grey);
         font: var(--body1-regular);
         margin: 0;
-    @media screen and (prefers-color-scheme) {
+    @media (prefers-color-scheme: light) {
         background-color: var(--white);
         color: var(--black);
     }

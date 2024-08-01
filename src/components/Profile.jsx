@@ -45,7 +45,7 @@ const ProfileStyled = styled.div`
     gap: 0.5rem;
     margin-block-end: 1.5rem;
   }
-  @media screen and (prefers-color-scheme) {
+  @media (prefers-color-scheme: light) {
     .info {
       color: var(--black);
       font: var(--body2-regular);

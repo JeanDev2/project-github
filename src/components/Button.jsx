@@ -20,7 +20,7 @@ const ButtonsStyled = styled.button`
     background-color: var(--white);
     color: var(--buttonBG);
   }
-  @media screen and (prefers-color-scheme) {
+  @media (prefers-color-scheme: light) {
     background-color: var(--white);
     color: var(--buttonBG);
     border: 1px solid var(--grey);
@@ -54,7 +54,7 @@ export const ButtonContrast = styled(Buttons)`
     background-color: var(--buttonBG);
     color: var(--white);
   }
-  @media screen and (prefers-color-scheme) {
+  @media (prefers-color-scheme: light) {
     background-color: var(--primary-1);
     color: var(--white);
     border: none;
@@ -74,7 +74,7 @@ export const ButtonRounded = styled(Buttons)`
     background-color: var(--buttonBG);
     transform: scale(1.1);
   }
-  @media screen and (prefers-color-scheme) {
+  @media (prefers-color-scheme: light) {
     background-color: var(--primary);
   }
   &:hover {
