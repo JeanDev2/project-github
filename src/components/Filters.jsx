@@ -20,6 +20,11 @@ const FiltersStyled = styled.div`
     display: flex;
     gap: 0.5rem;
   }
+  @media screen and (prefers-color-scheme) {
+    .count {
+      color: var(--black);
+    }
+  }
 `;
 
 function Filters({ repoListCount = 0, setSearch, setLanguage }) {

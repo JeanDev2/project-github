@@ -30,13 +30,19 @@ const languages = {
   javascript: {
     color: "yellow",
   },
+  html: {
+    color: "orange",
+  },
+  python: {
+    color: "skyblue",
+  },
 };
 
 function Language({ name }) {
   const formatedName = name.toLowerCase();
   const color = languages[formatedName]
     ? languages[formatedName].color
-    : "white";
+    : "grey";
   return (
     <LanguageStyled color={color}>
       <>

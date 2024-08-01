@@ -9,6 +9,18 @@ const InputText = styled.input`
   font: var(--body2-regular);
   color: var(--white);
   flex: 1;
+  &:hover,
+  &:focus {
+    border: 1px solid var(--primary);
+  }
+  @media screen and (prefers-color-scheme) {
+    color: var(--bg);
+    background-color: var(--white);
+    &:hover,
+    &:focus {
+      outline: 1px solid var(--primary);
+    }
+  }
 `;
 
 // function InputText() {

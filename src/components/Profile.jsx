@@ -45,6 +45,20 @@ const ProfileStyled = styled.div`
     gap: 0.5rem;
     margin-block-end: 1.5rem;
   }
+  @media screen and (prefers-color-scheme) {
+    .info {
+      color: var(--black);
+      font: var(--body2-regular);
+    }
+    .name {
+      font: var(--headline1);
+      color: var(--black);
+    }
+    .username {
+      font: var(--headline2-ligth);
+      color: var(--grey-4);
+    }
+  }
 `;
 
 function Profile(props) {
@@ -80,12 +94,20 @@ function Profile(props) {
       </div>
       <p className="bio info">{bio}</p>
       <p className="followers info">
-        ° {followers} <span>followers</span> <span>|</span> {following}
+        <Icon name="user" color="var(--grey)" />
+        {followers} <span>followers</span> <span>.</span> {following}
         <span>following</span>
       </p>
-      <p className="stars info">° 81</p>
-      <p className="location info">° {location}</p>
+      <p className="stars info">
+        <Icon name="star" color="var(--grey)" />
+        81
+      </p>
+      <p className="location info">
+        <Icon name="location" color="var(--grey)" />
+        {location}
+      </p>
       <a className="info" href={blog} target="_blank" rel="noreferrer">
+        <Icon name="link" color="var(--grey)" />
         {blog}
       </a>
       <a
@@ -94,7 +116,7 @@ function Profile(props) {
         target="_blank"
         rel="noreferrer"
       >
-        @{twitter_username}
+        <Icon name="twitter" color="var(--grey)" />@{twitter_username}
       </a>
     </ProfileStyled>
   );

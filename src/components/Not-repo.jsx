@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const NotStyled = styled.p`
+const NotStyled = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,7 +12,7 @@ const NotStyled = styled.p`
 function NotRepo() {
   return (
     <NotStyled>
-      <p>No hay Repositorios</p>
+      <span>No hay Repositorios</span>
     </NotStyled>
   );
 }

@@ -63,6 +63,29 @@ const RepoItemStyled = styled.div`
       color: var(--white);
     }
   }
+  @media screen and (prefers-color-scheme) {
+    border-block-end: 1px solid var(--grey-6);
+    .topicsItem {
+      background-color: var(--blue-1);
+      color: var(--primary);
+      &:hover {
+        background-color: var(--primary);
+        color: var(--white);
+      }
+    }
+    .details-item {
+      color: var(--grey-2);
+      & span::first-letter {
+        text-transform: uppercase;
+      }
+      &:hover {
+        color: var(--grey-3);
+      }
+    }
+    .description {
+      color: var(--grey-4);
+    }
+  }
 `;
 
 function RepoItem(props) {
