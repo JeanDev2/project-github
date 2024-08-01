@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 const LayoutStyled = styled.div`
+  display: grid;
+  grid-template-areas: "profile" "filters" "repo-list";
   min-block-size: 100vh;
   max-inline-size: 75rem;
   margin: auto;

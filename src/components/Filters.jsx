@@ -25,6 +25,14 @@ const FiltersStyled = styled.div`
       color: var(--black);
     }
   }
+  @media screen and (max-width: 768px) {
+    .action-list {
+      flex-direction: column;
+    }
+    .select-list {
+      block-size: 2.5rem;
+    }
+  }
 `;
 
 function Filters({ repoListCount = 0, setSearch, setLanguage }) {

@@ -29,6 +29,9 @@ const ButtonsStyled = styled.button`
       color: var(--black);
     }
   }
+  @media screen and (max-width: 768px) {
+    flex: 1;
+  }
 `;
 
 function Buttons({ text, link, className, icon }) {
